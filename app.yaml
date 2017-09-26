@@ -1,0 +1,4 @@
+runtime: nodejs
+env: flex
+env_variables:
+  MONGO_URI: mongodb://root:password@ds147454.mlab.com:47454/apollo

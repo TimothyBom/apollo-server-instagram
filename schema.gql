@@ -1,0 +1,32 @@
+export default `
+    type User {
+        _id: ID!
+        username: String
+        posts: [Post]
+    }
+
+    type Post {
+        _id: ID!
+        caption: String
+        publicId: String
+        imageUrl: String
+        createdAt: String
+        owner: User
+    }
+
+    type Query {
+        allUsers: [User]
+        allPosts: [Post]
+    }
+
+    type Mutation {
+        signup(username: String!, password: String!): User!
+        login(username: String!, password: String!): String!
+        createPost(caption: String!, publicId: String!, imageUrl: String!, token: String!): Post
+    }
+
+    schema {
+        query: Query
+        mutation: Mutation
+    }
+`
